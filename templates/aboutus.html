@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<meta name="theme-color" content="">
+	<title>GPA Calculator</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+	
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link type="text/css" href="{{ url_for('static', filename = 'css/aboutus.css') }}" rel="stylesheet">
+
+
+	<style>
+		.card{
+			margin-bottom: 30px;
+			width: 350px;
+		}
+        i{
+           color:white;
+	
+		   position: relative;
+		   left:10px;
+		   top:20px;
+		   
+		}
+		h3{
+			position: relative;
+			left:80px;
+			bottom:12px;
+			color:white;
+		}
+
+		
+		
+
+	</style>
+
+	
+</head>
+
+	<body style="background-color:  whitesmoke;">
+
+	<!-- HEADER -->
+	<nav>
+      
+	
+		<div class="logo">
+		
+		<a href="/">
+
+			<i class="fa fa-backward fa-9x"></i>
+		</a>
+		
+		 <h3>Developers</h3> 
+		</div>
+		
+		
+	
+		
+	 </nav>
+
+
+
+	 
+
+    <div class="row justify-content-center">
+		<div class="col-lg-3 col-sm-12 col-md-12">
+			<div class="card">
+				<img src="{{ url_for('static', filename = 'images/vaibhav.jpg') }}"  alt="Person" class="card__image">
+				<p class="card__name">Vaibhav Kaushik</p>
+				
+				<ul class="social-icons">
+				  <li><a href="https://github.com/vaibhavk039"><i class="fa fa-github"></i></a></li>
+				  <li><a href="https://www.linkedin.com/in/vaibhav-kaushik-758433122/?msgControlName=reply_to_sender&msgConversationId=6752139770677276672&msgOverlay=true"><i class="fa fa-linkedin"></i></a></li>
+				  <li><a href="https://www.instagram.com/vaibhavk039/"><i class="fa fa-instagram"></i></a></li>
+				  <li><a href="mailto:vaibhavk039@gmail.com"><i class="fa fa-envelope"></i></a></li>
+				</ul>
+				<a class="port"style="text-decoration: none; color:whitesmoke;" href="https://vaibhav-live-portfolio.herokuapp.com/"><h5>Do check out my Portfolio</h5></a>
+			  </div>
+		</div>
+		
+  
+		 
+  
+  
+	
+      <div class="col-lg-3 col-sm-12 col-md-12">
+
+		<div class="card card1">
+			<img src="{{ url_for('static', filename = 'images/piyush.jpg') }}" alt="Person" class="card__image">
+			<p class="card__name">Piyush Chandan</p>
+			
+			<ul class="social-icons">
+			  <li><a href="https://github.com/piyush1999999"><i class="fa fa-github"></i></a></li>
+			  <li><a href="https://www.linkedin.com/in/piyush-chandan-3480b8172/"><i class="fa fa-linkedin"></i></a></li>
+			  <li><a href="https://www.instagram.com/piyush_6425/"><i class="fa fa-instagram"></i></a></li>
+			  <li><a href="mailto:piyush.chandan1999@gmail.com"><i class="fa fa-envelope"></i></a></li>
+			</ul>
+		  </div>
+
+	  </div>
+
+
+		
+
+	    </div>
+	
+				
+				
+		
+		
+		
+		</body>
+			
+
+
+
+	
+	
+	
+</body>
+</html>

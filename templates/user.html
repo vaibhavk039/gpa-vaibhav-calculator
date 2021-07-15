@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0" />
+	<meta name="theme-color" content="#38393b" />
+	<title>GPA Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
+
+	<link type="text/css" href="{{ url_for('static', filename = 'css/user.css') }}" rel="stylesheet" />
+    <title>GPA Calculator</title>
+</head>
+
+<body style="background-color:  whitesmoke;">
+	
+	
+	<!--Header-->
+	<nav>
+		<a  style="text-decoration:none;" href="/"><div class="logo">
+			GPA Calculator
+		 </div></a>
+
+		 <div class="d-flex justify-content-end">
+			<a style="text-decoration:none;position: relative;right: 20px;"href="https://github.com/vaibhavk039/gpa-vaibhav-calculator">
+				<p style="position: relative;color:white;font-size:smaller;top:40px;right:10px;">Source</p>
+				<i style="color: white;position: relative;bottom: 30px;"class="fa fa-github fa-2x"></i>
+			
+			</a>
+			<a style="text-decoration:none;"href="aboutus">
+				<p style="position:relative;color:white;font-size: smaller;top:40px;">Hello</p>
+				<i style="color: white;position: relative;bottom: 30px;"class="fa fa-cat fa-2x"></i>
+			
+			</a>
+
+		 </div>
+		
+		
+	
+		
+	 </nav>
+	 
+	 
+    
+	
+		<div class="container">
+			<div class="row">
+				<div class="header-message">
+					<h1 style="color:#4B0082;font-size:x-large;font-weight: bold; margin-top: 10px;"><b>Enter Your Registration Number</b></h1>
+				</div>
+	
+				<div class="offset-md-3 col-md-6 col-sm-12 offset-sm-0 header-message-container">
+					<form action="/table" method="POST">
+					<div class="header-message">
+						
+						
+						<select id="exam-id" class="form-control form-control-sm" name="ch">
+							
+							
+							<option value="non">Select examination </option>
+							<option value="1">May/June 2021 Semester Examination</option>
+                            <option value="2">November/December 2020 Semester Examination</option>
+                            <option value="3">April/May 2020 Semester Examination</option>
+							<option value="4">November/December 2019 Semester Examination</option>
+							<option value="5">May/June 2019 Semester Examination</option>
+							<option value="6">November/December 2018 Semester Examination</option>
+							
+						</select>
+					</div>
+					<div class="header-message">
+						<input id="registration-number" class="form-control form-control-sm" 
+							placeholder="Enter name or registration number" name="reg" />
+					</div>
+					<div class="header-message">
+						<button style="background-color: #4B0082; color: white;"type="submit" id="calculate-button" class="btn">SUBMIT</button>
+					</div>
+				</form>	
+				</div>
+			</div>
+				
+		</div>
+		              {% if gpa %}
+					  <div style="background-color: #c89fe6;width:400px; height:40px ;"class="alert" role="alert">
+						<h1 style="text-align: center;color:#4B0082;font-size: larger;font-weight: bold;position: relative;bottom: 5px;">{{gpa}}</h1>	
+					  </div>
+					  
+					  {% endif %}
+		     
+				     
+			   
+					
+		
+	
+	
+
+	
+
+	
+</body>
+
+</html>

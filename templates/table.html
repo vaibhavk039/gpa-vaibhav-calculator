@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"type="text/css" href="{{ url_for('static', filename = 'css/table.css') }}">
+    <title>GPA Calculator</title>
+    <style>
+     
+     i{
+         color:white;
+       
+         position: relative;
+         left:10px;
+         top:15px;
+         
+      }
+      h3{
+        position: relative;
+        left:80px;
+        bottom:30px;
+      }
+  
+      
+      
+      
+  
+    </style>
+   
+</head>
+  
+<body>
+  <nav>
+      
+	
+		<div class="logo">
+		
+		<a href="/">
+
+			<i class="fa fa-backward fa-1x"></i>
+		</a>
+		
+		 <h3>Back to Dashboard</h3> 
+		</div>
+		
+		
+	
+		
+	 </nav>
+ 
+	    
+   {% if gpa %}
+  <h1 style="color:#4B0082">Your Result {{reg}}</h1>
+
+  <div class="row d-flex justify-content-center">
+     
+
+      <div class="card" id="container">
+      <div class="card-body crd1">
+        
+          
+   
+         
+       
+        {% for i in range(0,leng)  %}
+          
+      
+        <div id="subject" class="bold mediumText">
+          <span ><h4>{{sub[i]}}</h4></span>
+             <span><h4 style="font-size:large;">{{grade[i]}}</h4></span></div>
+            <span></span>
+           
+          <div class="smcard">
+              <span style="width:25px; height: 4px; background-color: #e9edf3;border-radius:4px;text-align: center; position: relative; right: 4px;"><span><b>I</b>:</span> {{inter[i]}} </span>
+              <span style="width:25px; height: 4px; background-color: #e9edf3;border-radius:4px;text-align: center; position: relative; left: 4px;"><span><b>E</b>:</span> {{exter[i]}} </span>
+              <span style="width:25px; height: 4px; background-color: #e9edf3;border-radius:4px;text-align: center; position: relative; left: 10px;"><span><b>T</b>:</span> {{tot[i]}}</span>
+          </div>
+            <hr>
+            {% endfor %}
+         
+            <a href="#" style="height:50px;position: relative; left:100px; bottom:7px;background-color: white;" class="btn btn-lg disabled text-center" role="button" aria-disabled="true"><div style="position: relative; bottom:25px;">
+              <h1 style="color:black;font-weight: bold;">{{gpa}}</h1>
+             </div> </a> 
+           
+         
+            
+      </div>
+      
+    </div>
+      
+  </div>
+  
+ 
+    
+  {% else %}
+  <h1 style="text-align: center;color: aliceblue;font-size: larger;">Go back and enter your registration number</h1>	
+  {% endif %}
+
+
+   
+
+    
+</body>
+</html>
