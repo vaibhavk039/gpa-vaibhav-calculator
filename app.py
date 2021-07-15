@@ -115,7 +115,7 @@ def table():
         
         if sum != 0:
           gpa = sum1 / sum
-   
+          print(gpa)
         else:
           gpa = 0
 
