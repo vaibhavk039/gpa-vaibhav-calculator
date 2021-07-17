@@ -22,9 +22,12 @@
 	
 	<!--Header-->
 	<nav>
+		<img  style="width:50px;height:50px;"src="{{ url_for('static', filename = 'images/calculator.png') }}" sizes="16x16 32x32" type="image/png"  alt="Person" class="cal"> 
 		<a  style="text-decoration:none;" href="/"><div class="logo">
+			
 			GPA Calculator
 		 </div></a>
+		 
 
 		 <div class="d-flex justify-content-end">
 			<a style="text-decoration:none;position: relative;right: 20px;"href="https://github.com/vaibhavk039/gpa-vaibhav-calculator">
@@ -39,11 +42,13 @@
 			</a>
 
 		 </div>
+		 
 		
 		
 	
 		
 	 </nav>
+	
 	 
 	 
     
@@ -85,6 +90,7 @@
 			</div>
 				
 		</div>
+	
 		              {% if gpa %}
 					  <div style="background-color: #c89fe6;width:400px; height:40px ;"class="alert" role="alert">
 						<h1 style="text-align: center;color:#4B0082;font-size: larger;font-weight: bold;position: relative;bottom: 5px;">{{gpa}}</h1>	
