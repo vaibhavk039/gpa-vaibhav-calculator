@@ -38,21 +38,22 @@ def table():
   gpa=''
   reg=0
 
-  
   if(request.form.get('ch') =='1'):
+     gf='nov-dec2021.json'
+  elif(request.form.get('ch') =='2'):
      gf='may-june2021.json'
 
-  elif(request.form.get('ch') =='2'):
-     gf='march2021(firstyear).json'
   elif(request.form.get('ch') =='3'):
+     gf='march2021(firstyear).json'
+  elif(request.form.get('ch') =='4'):
      gf='nov-dec2020.json'
-  elif(request.form.get('ch')=='4'):
-     gf='may-june2020.json'
   elif(request.form.get('ch')=='5'):
-     gf='nov-dec2019.json'
+     gf='may-june2020.json'
   elif(request.form.get('ch')=='6'):
-     gf='may-june2019.json'
+     gf='nov-dec2019.json'
   elif(request.form.get('ch')=='7'):
+     gf='may-june2019.json'
+  elif(request.form.get('ch')=='8'):
      gf='nov-dec2018.json'
   else:    
     gpa="Select a Semester!!"
