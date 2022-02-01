@@ -41,7 +41,7 @@ def table():
   
 
   if(request.form.get('ch') =='1'):
-     gf='nov-dec2021.json'
+     gf='nov-dec2021(new).json'
   elif(request.form.get('ch') =='2'):
      gf='may-june2021.json'
 
@@ -165,7 +165,7 @@ def cgpa():
         return redirect(url_for('user1',gpa=gpa))
  else:       
    
-    fk=['nov-dec2021.json','nov-dec2020.json','nov-dec2019.json','nov-dec2018.json','may-june2021.json','may-june2020.json','may-june2019.json']
+    fk=['nov-dec2021(new).json','nov-dec2020.json','nov-dec2019.json','nov-dec2018.json','may-june2021.json','may-june2020.json','may-june2019.json']
     for gf in fk:
        f = open (gf, "r")                   
        data = json.loads(f.read())
