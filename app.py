@@ -155,7 +155,7 @@ def cgpa():
  k=[]
  reg=request.form.get('reg')
  reg1=str(reg)
- gf="nov-dec2021.json"
+ gf="nov-dec2021(new).json"
  f = open (gf, "r")   
  data = json.loads(f.read())
  a=[key[0] for key in data.items()]
